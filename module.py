@@ -1,6 +1,6 @@
 def pascalize(str):
-    /* Takes a string and finds parts seperated by blanks or underlines.
-       Capitalize each part and join end to end. */ 
+    """ Takes a string and finds parts seperated by blanks or underlines.
+       Capitalize each part and join end to end. """
         
     temp = []
     if ' ' in str:
@@ -14,8 +14,8 @@ def pascalize(str):
 
 
 def depascalize(str):
-    /* Takes a string and finds parts which are starting with upper latters.
-       Join these parts after converting to lower case and put underline between them. */
+    """ Takes a string and finds parts which are starting with upper latters.
+       Join these parts after converting to lower case and put underline between them. """
         
     pos = [i for i, e in enumerate(str + 'A') if e.isupper()]
     parts = [str[pos[j]:pos[j + 1]] for j in range(len(pos) - 1)]
@@ -26,9 +26,9 @@ def depascalize(str):
 
 
 def camelize(str):
-    /* Takes a string and remove dots in the string first if string has one or more dots except last character.
+    """ Takes a string and remove dots in the string first if string has one or more dots except last character.
        Finds parts seperated by blanks or underlines.
-       Capitalize each part except first part and join end to end. */
+       Capitalize each part except first part and join end to end. """
         
     lst = str[-1]
     str_t = str[:-1].replace('.', '')
@@ -52,8 +52,8 @@ def camelize(str):
 
 
 def snakecase(str):
-    /* Takes a string and finds parts which are starting with upper latters.
-       Join parts after converting to lower case and put underlines between them. */
+    """ Takes a string and finds parts which are starting with upper latters.
+       Join parts after converting to lower case and put underlines between them. """
         
     pos = [i for i, e in enumerate(str + 'A') if e.isupper()]
     parts = [str[pos[j]:pos[j + 1]] for j in range(len(pos) - 1)]
@@ -64,7 +64,7 @@ def snakecase(str):
 
 
 def is_pascalize(str):
-    /* Takes a string and check if string not contains blanks or underlines or start with lower case. */
+    """ Takes a string and check if string not contains blanks or underlines or start with lower case. """
     
     if ' ' in str or '_' in str or str[0] != str[0].upper():
         return False
@@ -72,7 +72,7 @@ def is_pascalize(str):
 
 
 def is_camelcase(str):
-    /* Takes a string and check if string not contains blanks or underlines or start with upper case. */
+    """ Takes a string and check if string not contains blanks or underlines or start with upper case. """
     
     if ' ' in str or '_' in str or str[0] != str[0].lower():
         return False
@@ -80,7 +80,7 @@ def is_camelcase(str):
 
 
 def is_snakecase(str):
-    /* Takes a string and check if string not contains blanks or start with upper case. */
+    """ Takes a string and check if string not contains blanks or start with upper case. """
     
     if ' ' in str or str != str.lower():
         return False
